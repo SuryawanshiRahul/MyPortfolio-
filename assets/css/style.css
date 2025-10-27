@@ -331,6 +331,48 @@ main {
   gap: 15px;
 }
 
+ /*-----------------------------------*\
+   AVATAR border color change on hover
+\*-----------------------------------*/
+.avatar-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Common border color for both */
+.avatar-box img {
+  border: 4px solid var(--orange-yellow-crayola);
+  object-fit: cover;
+}
+
+/* Desktop image — rectangular vertical shape */
+.avatar-desktop {
+  width: 160px;
+  height: 220px;
+  border-radius: 12px; /* slightly rounded corners */
+  display: block;
+}
+
+/* Mobile image — circular shape */
+.avatar-mobile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* full circle */
+  display: none;
+}
+
+/* Responsive behavior — show circle only on mobile */
+@media (max-width: 768px) {
+  .avatar-desktop {
+    display: none;
+  }
+
+  .avatar-mobile {
+    display: block;
+  }
+}
 
  /*-----------------------------------*\
   #RESPONSIVE AVATAR SWITCH

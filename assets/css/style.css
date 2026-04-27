@@ -147,6 +147,12 @@ button {
   text-align: left;
   cursor: pointer;
 }
+.company {
+  font-size: 10px; /* small size */
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 4px;
+ text-align: center;
+}
 
 input, textarea {
   display: block;

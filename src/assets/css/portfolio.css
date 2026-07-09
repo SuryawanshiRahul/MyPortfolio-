@@ -1,0 +1,311 @@
+/*-----------------------------------*\
+  # PORTFOLIO
+\*-----------------------------------*/
+
+/* Filter Buttons */
+
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.filter-item button {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  transition: var(--transition-1);
+}
+
+.filter-item button:hover {
+  color: var(--orange-yellow-crayola);
+}
+
+.filter-item button.active {
+  color: var(--orange-yellow-crayola);
+}
+
+/*-----------------------------------*\
+  # MOBILE FILTER
+\*-----------------------------------*/
+
+.filter-select-box {
+  position: relative;
+  margin-bottom: 30px;
+  display: none;
+}
+
+.filter-select {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+
+  border-radius: var(--border-radius-medium);
+
+  background: var(--eerie-black-2);
+
+  color: var(--light-gray);
+
+  border: 1px solid var(--jet);
+}
+
+.select-icon {
+  color: var(--orange-yellow-crayola);
+}
+
+.select-list {
+  position: absolute;
+
+  top: calc(100% + 8px);
+
+  width: 100%;
+
+  background: var(--eerie-black-2);
+
+  border-radius: var(--border-radius-medium);
+
+  border: 1px solid var(--jet);
+
+  box-shadow: var(--shadow-2);
+
+  overflow: hidden;
+
+  z-index: 5;
+}
+
+.select-item button {
+  width: 100%;
+
+  padding: 12px 16px;
+
+  color: var(--light-gray);
+
+  transition: var(--transition-1);
+}
+
+.select-item button:hover {
+  background: var(--onyx);
+
+  color: var(--orange-yellow-crayola);
+}
+
+/*-----------------------------------*\
+  # PROJECT LIST
+\*-----------------------------------*/
+
+.project-list {
+  display: grid;
+  gap: 30px;
+}
+
+.project-item {
+  display: block;
+}
+
+/*-----------------------------------*\
+  # PROJECT CARD
+\*-----------------------------------*/
+
+.project-card {
+  background: var(--eerie-black-2);
+
+  border: 1px solid var(--jet);
+
+  border-radius: var(--border-radius-large);
+
+  overflow: hidden;
+
+  transition: var(--transition-1);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: var(--shadow-3);
+}
+
+/* Image */
+
+.project-img {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.project-img img {
+  width: 100%;
+
+  height: 230px;
+
+  object-fit: cover;
+
+  transition: var(--transition-2);
+}
+
+.project-card:hover .project-img img {
+  transform: scale(1.08);
+}
+
+/* Eye Icon */
+
+.project-item-icon-box {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, .45);
+
+  color: var(--white-1);
+
+  font-size: 26px;
+
+  opacity: 0;
+
+  transition: var(--transition-2);
+
+  z-index: 2;
+}
+
+.project-card:hover .project-item-icon-box {
+  opacity: 1;
+}
+
+/* Content */
+
+.project-content {
+  padding: 20px;
+}
+
+.project-title {
+  color: var(--white-2);
+
+  font-size: var(--fs-4);
+
+  margin-bottom: 10px;
+}
+
+.project-category {
+  color: var(--orange-yellow-crayola);
+
+  font-size: var(--fs-7);
+
+  margin-bottom: 12px;
+
+  text-transform: capitalize;
+}
+
+.project-description {
+  color: var(--light-gray);
+
+  font-size: var(--fs-7);
+
+  line-height: 1.7;
+
+  margin-bottom: 18px;
+}
+
+/*-----------------------------------*\
+  # TECH STACK
+\*-----------------------------------*/
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 20px;
+}
+
+.tech-badge {
+  padding: 6px 10px;
+
+  border-radius: 30px;
+
+  background: var(--onyx);
+
+  color: var(--orange-yellow-crayola);
+
+  font-size: 11px;
+
+  font-weight: var(--fw-500);
+}
+
+/*-----------------------------------*\
+  # BUTTONS
+\*-----------------------------------*/
+
+.project-buttons {
+  display: flex;
+
+  gap: 10px;
+}
+
+.project-btn {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px;
+
+  border-radius: var(--border-radius-medium);
+
+  background: var(--border-gradient-onyx);
+
+  color: var(--orange-yellow-crayola);
+
+  transition: var(--transition-1);
+}
+
+.project-btn:hover {
+  transform: translateY(-2px);
+}
+
+.project-btn svg {
+  font-size: 16px;
+}
+
+/*-----------------------------------*\
+  # RESPONSIVE
+\*-----------------------------------*/
+
+@media (max-width: 768px) {
+
+  .filter-list {
+    display: none;
+  }
+
+  .filter-select-box {
+    display: block;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .project-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}

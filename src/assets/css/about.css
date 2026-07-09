@@ -1,0 +1,128 @@
+/*-----------------------------------*\
+  # ABOUT
+\*-----------------------------------*/
+
+.about-text {
+  color: var(--light-gray);
+
+  font-size: var(--fs-6);
+
+  font-weight: var(--fw-300);
+
+  line-height: 1.7;
+
+  margin-bottom: 30px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/*-----------------------------------*\
+  # SERVICE
+\*-----------------------------------*/
+
+.service-title {
+  margin-bottom: 20px;
+}
+
+.service-list {
+  display: grid;
+  gap: 20px;
+}
+
+.service-item {
+  position: relative;
+
+  background: var(--border-gradient-onyx);
+
+  padding: 20px;
+
+  border-radius: var(--border-radius-medium);
+
+  box-shadow: var(--shadow-2);
+
+  z-index: 1;
+}
+
+.service-item::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 1px;
+
+  background: var(--bg-gradient-jet);
+
+  border-radius: inherit;
+
+  z-index: -1;
+}
+
+.service-icon-box {
+  margin-bottom: 15px;
+}
+
+.service-icon-box img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.service-item-title {
+  margin-bottom: 10px;
+
+  color: var(--white-2);
+
+  font-size: var(--fs-4);
+}
+
+.service-item-text {
+  color: var(--light-gray);
+
+  font-size: var(--fs-6);
+
+  font-weight: var(--fw-300);
+
+  line-height: 1.7;
+}
+
+/*-----------------------------------*\
+  # TABLET
+\*-----------------------------------*/
+
+@media (min-width: 580px) {
+
+  .service-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+/*-----------------------------------*\
+  # DESKTOP
+\*-----------------------------------*/
+
+@media (min-width: 1024px) {
+
+  .about-text {
+    font-size: var(--fs-5);
+  }
+
+  .service-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .service-icon-box {
+    margin-bottom: 0;
+  }
+
+}
